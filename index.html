@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hasan Asif — AI & Automation Engineer</title>
+  <meta name="description" content="Hasan Asif — AI & Automation Engineer building agentic systems, voice AI and RAG pipelines. Explore the city to learn more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#directory">Skip to directory</a>
+
+  <!-- ============ CITY VIEW ============ -->
+  <main class="city" id="city">
+    <div class="stage" id="stage" aria-hidden="true"></div>
+    <div class="labels" id="labels" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <span class="topbar__item">HASAN ASIF</span>
+      <span class="topbar__item topbar__item--mid">AI &amp; AUTOMATION ENGINEER</span>
+      <div class="topbar__item topbar__item--end">
+        <span class="topbar__clock">MIRPUR, AJK — <time id="clock">--:--</time> PKT</span>
+        <button class="toggle" id="theme-toggle" type="button" aria-pressed="true" aria-label="Night view">
+          <span class="toggle__opt toggle__opt--day" aria-hidden="true">Day</span><span class="toggle__opt toggle__opt--night" aria-hidden="true">Night</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title">Hasan<br>Asif</h1>
+      <p class="hero__sub">Agentic systems · Voice AI · RAG<br>Building production LLM systems since 2024.</p>
+    </section>
+
+    <div class="skyline-wrap" id="skyline-wrap" hidden>
+      <svg class="skyline" id="skyline" viewBox="0 0 1600 662" preserveAspectRatio="xMidYMax meet" role="group" aria-label="City skyline. Each building opens a section about Hasan.">
+        <g id="stars" aria-hidden="true"></g>
+        <g id="backdrop" aria-hidden="true"></g>
+        <g id="buildings"></g>
+        <line class="ground" x1="0" y1="640" x2="1600" y2="640" aria-hidden="true"/>
+      </svg>
+    </div>
+
+    <div class="dock">
+      <p class="hint" aria-hidden="true"><span class="hint__dot"></span><span class="hint__desk" id="hint-desk">Select a building to enter</span><span class="hint__mobile" id="hint-mobile">Swipe the city · tap a building</span></p>
+      <nav class="directory" id="directory" aria-label="Building directory">
+        <p class="directory__label">Directory</p>
+        <ul class="directory__list" id="directory-list"></ul>
+      </nav>
+    </div>
+  </main>
+
+  <!-- ============ BUILDING INTERIOR ============ -->
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+    <div class="panel__bar">
+      <button class="btn" id="panel-close" type="button"><span aria-hidden="true">←</span> Back to city</button>
+      <span class="panel__floor" id="panel-floor" aria-hidden="true"></span>
+      <div class="panel__nav">
+        <button class="btn btn--icon" id="panel-prev" type="button" aria-label="Previous building">←</button>
+        <button class="btn btn--icon" id="panel-next" type="button" aria-label="Next building">→</button>
+      </div>
+    </div>
+
+    <div class="panel__scroll" id="panel-scroll">
+
+      <!-- 01 ABOUT -->
+      <article class="room" data-room="about" hidden>
+        <p class="room__kicker">01 — The Residence</p>
+        <h2 class="room__title">About</h2>
+        <div class="room__grid">
+          <p class="lead">AI and automation engineer with 2.5 years of hands-on experience building production LLM systems — autonomous agents, voice agents, agentic RAG pipelines and LLM output verification.</p>
+          <div class="prose">
+            <p>Currently Senior AI Engineer at SelfTech Pvt Ltd, where I joined as an intern and now lead AI delivery on commercial products, including Smart Learning Hub, a UK-market AI tutoring platform.</p>
+            <p>I own work end to end: retrieval design, agent orchestration in n8n, and deployment on AWS, Azure and Vercel. Alongside AI work I build real-time interactive systems, including BlackZone, a 3D first-person shooter in Unity.</p>
+            <p>I ship fast using AI-native development tooling: Claude Code and Codex.</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Role</dt><dd>Senior AI Engineer, SelfTech</dd></div>
+          <div><dt>Experience</dt><dd>2.5 years</dd></div>
+          <div><dt>Based in</dt><dd>Mirpur, AJK, Pakistan</dd></div>
+          <div><dt>Languages</dt><dd>English (professional), Urdu (native)</dd></div>
+          <div><dt>Availability</dt><dd>Remote — full-time &amp; contract</dd></div>
+        </dl>
+      </article>
+
+      <!-- 02 EXPERIENCE -->
+      <article class="room" data-room="experience" hidden>
+        <p class="room__kicker">03 — SelfTech Tower</p>
+        <h2 class="room__title">Experience</h2>
+        <div class="job">
+          <div class="job__head">
+            <h3 class="job__role">Senior AI Engineer</h3>
+            <p class="job__meta">SelfTech Pvt Ltd · 2024 — Present</p>
+          </div>
+          <ol class="ladder" aria-label="Career progression">
+            <li>Software Engineering Intern</li>
+            <li aria-current="step">Senior AI Engineer</li>
+          </ol>
+          <p class="prose">Promoted from intern to lead AI engineer on commercial client products.</p>
+          <ul class="bullets">
+            <li><strong>Smart Learning Hub.</strong> Lead AI engineering on a UK-market AI tutoring platform for GCSE and iGCSE Maths, Sciences, English and Literature. Built <em>Professor Ellis</em>, the conversational AI tutor that gives personalised explanations, adaptive learning paths and 24/7 student support.</li>
+            <li><strong>Agentic RAG.</strong> Designed and shipped retrieval systems over curriculum and document corpora using ChromaDB, with source-grounded retrieval and query rewriting to keep answers accurate and citable.</li>
+            <li><strong>LLM verification.</strong> Built systems that validate model output before it reaches users — schema enforcement, factual-consistency checks and automated quality gates — reducing incorrect responses in production.</li>
+            <li><strong>Voice agents.</strong> Developed real-time speech pipelines, including an AI voice assistant for customer support, tuned for turn-taking and latency.</li>
+            <li><strong>n8n Cloud.</strong> Orchestrated multi-step AI agents and business automations, integrating LLM calls with external APIs and internal systems to replace manual workflows.</li>
+            <li><strong>Deployment &amp; scale.</strong> Containerised services with Docker and deployed across AWS, Azure and Vercel, with monitoring and cost controls on LLM inference spend.</li>
+            <li><strong>Full product delivery.</strong> Built supporting web applications and interactive learning games across frontend, backend and AI layers.</li>
+            <li><strong>AI-native workflow.</strong> Accelerated delivery with Claude Code and Codex for spec-driven development, refactoring and test generation.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 03 PROJECTS -->
+      <article class="room" data-room="projects" hidden>
+        <p class="room__kicker">04 — The Workshop</p>
+        <h2 class="room__title">Projects</h2>
+        <div class="cards">
+          <section class="card">
+            <p class="card__index">P/01</p>
+            <h3 class="card__title">Smart Learning Hub</h3>
+            <p class="card__meta">AI tutoring platform · Commercial, SelfTech · <a href="https://smartlearninghub.co.uk" target="_blank" rel="noopener">smartlearninghub.co.uk ↗</a></p>
+            <p>AI-powered personalised learning for UK GCSE and iGCSE students, with an AI tutor, adaptive learning paths and real-time progress analytics. I built the AI layer end to end: the conversational tutoring agent, retrieval over curriculum content with ChromaDB, and verification of generated explanations. In production on AWS and Vercel.</p>
+            <ul class="tags" aria-label="Stack"><li>Anthropic Claude</li><li>ChromaDB</li><li>Python</li><li>Node.js</li><li>n8n</li><li>AWS</li><li>Vercel</li></ul>
+          </section>
+          <section class="card">
+            <p class="card__index">P/02</p>
+            <h3 class="card__title">AI Voice Assistant for Customer Support</h3>
+            <p class="card__meta">Client / internal · 2025</p>
+            <p>A production voice agent that handles inbound support calls end to end — greeting, intent detection, knowledge-base lookup, resolution, and warm handoff to a human. Real-time STT → LLM → TTS pipeline with turn-taking and barge-in, answers grounded through agentic RAG over support docs, and post-call automation in n8n for tickets, transcripts and CRM updates. Cut average handle time and freed human agents for complex cases.</p>
+            <ul class="tags" aria-label="Stack"><li>Anthropic Claude</li><li>Real-time STT/TTS</li><li>ChromaDB</li><li>n8n Cloud</li><li>Python</li><li>Webhooks</li></ul>
+          </section>
+          <section class="card">
+            <p class="card__index">P/03</p>
+            <h3 class="card__title">BlackZone — 3D First-Person Shooter</h3>
+            <p class="card__meta">Personal project · Unity</p>
+            <p>A full 3D FPS built from scratch: movement and camera control, weapons with recoil and reload, hitscan and projectile firing, enemy AI with patrol, chase and attack states, health and damage, HUD, level design, lighting and audio. Component-based C# with a complete loop from main menu to win/lose states.</p>
+            <ul class="tags" aria-label="Stack"><li>Unity</li><li>C#</li><li>NavMesh</li><li>URP</li><li>AI state machines</li></ul>
+          </section>
+          <section class="card">
+            <p class="card__index">P/04</p>
+            <h3 class="card__title">Agentic Automation — n8n Workflows</h3>
+            <p class="card__meta">Client / internal · 2025</p>
+            <p>Multi-step AI agent workflows in n8n Cloud that automate repetitive back-office tasks: pulling data from third-party APIs, running LLM reasoning with guardrails, and writing results back into internal systems. Replaced hours of manual work every week.</p>
+            <ul class="tags" aria-label="Stack"><li>n8n Cloud</li><li>LLM agents</li><li>Guardrails</li><li>REST APIs</li></ul>
+          </section>
+        </div>
+      </article>
+
+      <!-- 04 SKILLS -->
+      <article class="room" data-room="skills" hidden>
+        <p class="room__kicker">05 — The Water Tower</p>
+        <h2 class="room__title">Skills</h2>
+        <ul class="toolbelt" aria-label="Daily tools">
+          <li><img src="assets/logo-claude.png" alt="" width="40" height="40"><span>Claude</span></li>
+          <li><img src="assets/logo-n8n.png" alt="" width="60" height="32"><span>n8n</span></li>
+          <li><img src="assets/logo-elevenlabs.svg" alt="" width="96" height="40" class="toolbelt__wide"><span>ElevenLabs</span></li>
+        </ul>
+        <dl class="skills">
+          <div><dt>Agentic AI</dt><dd><ul class="tags"><li>Autonomous agents</li><li>Multi-agent orchestration</li><li>Tool &amp; function calling</li><li>Memory &amp; state</li><li>Human-in-the-loop</li><li>Guardrails &amp; fallbacks</li></ul></dd></div>
+          <div><dt>RAG &amp; Retrieval</dt><dd><ul class="tags"><li>Agentic RAG</li><li>ChromaDB</li><li>Chunking &amp; embeddings</li><li>Semantic search</li><li>Query rewriting</li><li>Source-grounded answers</li><li>Hallucination reduction</li></ul></dd></div>
+          <div><dt>Voice AI</dt><dd><ul class="tags"><li>Voice agent pipelines</li><li>Real-time STT/TTS</li><li>Turn-taking &amp; latency</li><li>Call handling</li><li>Post-call automation</li></ul></dd></div>
+          <div><dt>LLM Verification</dt><dd><ul class="tags"><li>LLM-as-judge</li><li>Schema enforcement</li><li>Factual-consistency checks</li><li>Automated quality gates</li></ul></dd></div>
+          <div><dt>Automation</dt><dd><ul class="tags"><li>n8n Cloud</li><li>Webhooks</li><li>Scheduled pipelines</li><li>Event-driven architecture</li><li>API integrations</li></ul></dd></div>
+          <div><dt>Models &amp; APIs</dt><dd><ul class="tags"><li>Anthropic Claude</li><li>Prompt engineering</li><li>Context engineering</li><li>Structured outputs</li><li>Cost optimisation</li><li>Model routing</li></ul></dd></div>
+          <div><dt>Engineering</dt><dd><ul class="tags"><li>Python</li><li>JavaScript / TypeScript</li><li>C#</li><li>REST APIs</li><li>Web apps</li><li>Flutter (working)</li></ul></dd></div>
+          <div><dt>Cloud &amp; DevOps</dt><dd><ul class="tags"><li>AWS</li><li>Azure</li><li>Vercel</li><li>Docker</li><li>CI/CD</li><li>Monitoring</li></ul></dd></div>
+          <div><dt>AI-Assisted Dev</dt><dd><ul class="tags"><li>Claude Code</li><li>OpenAI Codex</li><li>Spec-driven development</li><li>Automated testing</li></ul></dd></div>
+          <div><dt>Game Dev</dt><dd><ul class="tags"><li>Unity 3D</li><li>First-person mechanics</li><li>Scene &amp; asset design</li><li>C# gameplay</li></ul></dd></div>
+        </dl>
+      </article>
+
+      <!-- 05 EDUCATION -->
+      <article class="room" data-room="education" hidden>
+        <p class="room__kicker">02 — The University</p>
+        <h2 class="room__title">Education</h2>
+        <div class="job">
+          <div class="job__head">
+            <h3 class="job__role">B.S. Software Engineering</h3>
+            <p class="job__meta">Mirpur University of Science &amp; Technology (MUST) · Mirpur, AJK · 2022 — 2026</p>
+          </div>
+          <p class="room__label">Relevant coursework</p>
+          <ul class="tags tags--lg"><li>Data Structures &amp; Algorithms</li><li>Software Architecture</li><li>Databases</li><li>Artificial Intelligence</li><li>Web Technologies</li><li>Software Engineering</li></ul>
+        </div>
+      </article>
+
+      <!-- 06 CERTIFICATIONS -->
+      <article class="room" data-room="certifications" hidden>
+        <p class="room__kicker">06 — The Archive</p>
+        <h2 class="room__title">Certificates</h2>
+        <ul class="certs">
+          <li class="cert">
+            <span class="cert__issuer">Anthropic Academy</span>
+            <span class="cert__name">AI Fluency for Builders</span>
+            <a class="btn btn--sm" href="https://academy.claude.com/verify/b538839ccdd756816716683a5d920230" target="_blank" rel="noopener">Verify <span aria-hidden="true">↗</span><span class="sr-only"> AI Fluency for Builders (opens in new tab)</span></a>
+          </li>
+          <li class="cert">
+            <span class="cert__issuer">Anthropic Academy</span>
+            <span class="cert__name">AI Fluency: Framework &amp; Foundations</span>
+            <a class="btn btn--sm" href="https://academy.claude.com/verify/ef21e1b7fe9190761104b092071aa5a0" target="_blank" rel="noopener">Verify <span aria-hidden="true">↗</span><span class="sr-only"> AI Fluency: Framework &amp; Foundations (opens in new tab)</span></a>
+          </li>
+          <li class="cert">
+            <span class="cert__issuer">GoClean Movers Workshop Series, AJK</span>
+            <span class="cert__name">Leadership in Action — Level 1</span>
+            <a class="btn btn--sm" href="assets/goclean-certificates.pdf#page=1" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span><span class="sr-only"> Leadership in Action certificate (PDF)</span></a>
+          </li>
+          <li class="cert">
+            <span class="cert__issuer">GoClean Movers · ILO · Skill Our Future</span>
+            <span class="cert__name">Introduction to Green Jobs — Level 1</span>
+            <a class="btn btn--sm" href="assets/goclean-certificates.pdf#page=2" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span><span class="sr-only"> Introduction to Green Jobs certificate (PDF)</span></a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- 07 CONTACT -->
+      <article class="room" data-room="contact" hidden>
+        <p class="room__kicker">07 — The Radio Mast</p>
+        <h2 class="room__title">Contact</h2>
+        <p class="lead">Open to remote full-time and contract work. Building agents, voice AI or RAG? Let's talk.</p>
+        <a class="mega-link" href="mailto:hassanasif2003@gmail.com">hassanasif2003@gmail.com</a>
+        <ul class="contact">
+          <li><span>Phone</span><a href="tel:+923000993563">+92 300 0993563</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/hasan-asif-293b412a2" target="_blank" rel="noopener">in/hasan-asif-293b412a2 ↗</a></li>
+          <li><span>Location</span><span>Mirpur, AJK, Pakistan (PKT, UTC+5)</span></li>
+          <li><span>Resume</span><a href="assets/Hasan_Asif_Resume.pdf" download>Download PDF ↓</a></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="city3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
